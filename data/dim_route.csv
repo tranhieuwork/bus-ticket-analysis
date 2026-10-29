@@ -1,0 +1,21 @@
+﻿route_id,origin,destination,distance_km,duration_hours,base_price,route_name
+1,Hà Nội,Hải Phòng,120,2.5,120000,Hà Nội → Hải Phòng
+2,Hà Nội,Sa Pa,320,6.0,300000,Hà Nội → Sa Pa
+3,Hà Nội,Vinh,300,5.5,250000,Hà Nội → Vinh
+4,TP.HCM,Đà Lạt,300,7.0,300000,TP.HCM → Đà Lạt
+5,TP.HCM,Vũng Tàu,100,2.5,150000,TP.HCM → Vũng Tàu
+6,TP.HCM,Cần Thơ,170,3.5,170000,TP.HCM → Cần Thơ
+7,Đà Nẵng,Huế,100,2.5,120000,Đà Nẵng → Huế
+8,Hà Nội,Thanh Hóa,150,3.0,150000,Hà Nội → Thanh Hóa
+9,TP.HCM,Nha Trang,430,9.0,380000,TP.HCM → Nha Trang
+10,TP.HCM,Phan Thiết,200,4.0,200000,TP.HCM → Phan Thiết
+11,Hà Nội,Nam Định,90,2.0,100000,Hà Nội → Nam Định
+12,Đà Nẵng,Hội An,30,1.0,70000,Đà Nẵng → Hội An
+13,TP.HCM,Buôn Ma Thuột,350,8.0,330000,TP.HCM → Buôn Ma Thuột
+14,Hà Nội,Ninh Bình,95,2.0,110000,Hà Nội → Ninh Bình
+15,TP.HCM,Quy Nhơn,650,12.0,450000,TP.HCM → Quy Nhơn
+16,Huế,Hà Nội,680,13.0,450000,Huế → Hà Nội
+17,Hà Nội,Hạ Long,160,3.0,160000,Hà Nội → Hạ Long
+18,TP.HCM,Cà Mau,330,7.0,300000,TP.HCM → Cà Mau
+19,Cần Thơ,TP.HCM,170,3.5,170000,Cần Thơ → TP.HCM
+20,Hà Nội,Đà Nẵng,770,14.0,500000,Hà Nội → Đà Nẵng

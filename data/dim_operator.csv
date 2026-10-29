@@ -1,0 +1,31 @@
+﻿operator_id,operator_name,bus_type,rating,commission_rate,join_date,total_seats
+1,Nhà xe Sao Việt,Limousine,4.9,0.1,2019-12-18,22
+2,Nhà xe Bình An,Giường nằm,4.2,0.1,2019-07-26,34
+3,Nhà xe Thiên Long,Ghế ngồi,4.1,0.1,2017-04-30,45
+4,Nhà xe Hải Âu,Limousine,4.1,0.1,2019-01-17,22
+5,Nhà xe Xuân Mai,Giường nằm,4.5,0.1,2017-11-28,34
+6,Nhà xe Đại Nam,Ghế ngồi,4.6,0.1,2018-05-30,45
+7,Nhà xe Kim Mã,Limousine,3.4,0.08,2021-06-19,22
+8,Nhà xe Minh Tâm,Limousine,4.0,0.1,2021-01-14,22
+9,Nhà xe Hải Vân,Giường nằm,4.1,0.08,2020-11-08,34
+10,Nhà xe Tân Phát,Giường nằm,4.5,0.1,2018-11-22,34
+11,Nhà xe Phúc Lộc,Giường nằm,4.5,0.12,2023-09-03,34
+12,Nhà xe Việt Thành,Ghế ngồi,4.5,0.08,2016-09-12,45
+13,Nhà xe An Phú,Limousine,4.1,0.08,2018-09-27,22
+14,Nhà xe Gia Hưng,Ghế ngồi,4.4,0.08,2016-12-10,45
+15,Nhà xe Lam Sơn,Giường nằm,4.3,0.08,2018-09-16,34
+16,Nhà xe Thái Bình,Giường nằm,4.4,0.1,2023-09-09,34
+17,Nhà xe Hoa Mai,Limousine,4.6,0.1,2018-12-05,22
+18,Nhà xe Đông Dương,Giường nằm,4.4,0.1,2023-04-07,34
+19,Nhà xe Bắc Nam,Ghế ngồi,4.5,0.1,2019-12-16,45
+20,Nhà xe Trường Sinh,Limousine,4.3,0.1,2021-08-05,22
+21,Nhà xe Ngọc Lan,Limousine,4.4,0.12,2019-08-28,22
+22,Nhà xe Quang Huy,Giường nằm,4.5,0.08,2018-02-15,34
+23,Nhà xe Thành Công,Ghế ngồi,3.9,0.08,2022-02-09,45
+24,Nhà xe Mộc Châu,Ghế ngồi,4.2,0.08,2023-09-30,45
+25,Nhà xe Cửu Long,Limousine,4.2,0.1,2018-02-08,22
+26,Nhà xe Hồng Hà,Giường nằm,4.1,0.1,2022-03-23,34
+27,Nhà xe Vạn Xuân,Giường nằm,4.2,0.08,2018-02-01,34
+28,Nhà xe Nam Phương,Giường nằm,4.7,0.1,2021-09-24,34
+29,Nhà xe Tây Đô,Giường nằm,4.0,0.08,2022-04-22,34
+30,Nhà xe Long Biên,Limousine,4.6,0.1,2019-08-05,22
