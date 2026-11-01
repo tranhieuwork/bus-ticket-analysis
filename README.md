@@ -1,4 +1,4 @@
-# 🚌 Bus Ticket Analysis — Phân tích dashboard nền tảng đặt vé xe khách
+# Bus Ticket Analysis — Phân tích dashboard nền tảng đặt vé xe khách
 
 > Dự án Business Intelligence trên **Power BI**: xây dựng mô hình dữ liệu Fact–Dimension cho một nền tảng đặt vé xe khách (marketplace) giả lập, thiết kế dashboard 4 trang và chuyển hóa dữ liệu thành **insight** và **khuyến nghị hành động** cho doanh nghiệp.
 
@@ -39,7 +39,7 @@
 
 ---
 
-## 2. 🗂️ Dữ liệu và mô hình dữ liệu
+## 2. Dữ liệu và mô hình dữ liệu
 
 Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–Dimension** (galaxy schema): 2 bảng fact + 6 bảng dimension.
 
@@ -54,7 +54,7 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 | `dim_voucher` | Dimension | 7 dòng | 1 dòng / voucher |
 | `dim_date` | Dimension | 731 dòng | 1 dòng / ngày |
 
-![Data model](images/data-model.png)
+![Data model](screenshots/data_model.png)
 
 **Các điểm mô hình hóa đáng chú ý:**
 - `dim_date` có **2 quan hệ** với `fact_bookings` (1 active, 1 inactive) cho hai vai trò thời gian: *ngày đặt* và *ngày khởi hành* → dùng `USERELATIONSHIP` khi cần đổi vai trò.
@@ -66,13 +66,13 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 
 ---
 
-## 3. 📊 Phân tích dashboard & insight
+## 3. Phân tích dashboard & insight
 
 ### Trang 1 – Executive Overview
 
 > **Câu hỏi:** nền tảng đang vận hành ở quy mô nào, tạo ra bao nhiêu giá trị và khai thác nguồn cung hiệu quả đến đâu?
 
-![KPI Executive Overview](images/p1-kpi.png)
+![KPI Executive Overview](screenshots/executive_overview_dashboard.png)
 
 | Chỉ số | Kết quả | Nhận định |
 |---|---|---|
@@ -87,15 +87,14 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 
 **Insight chính**
 
-- 📈 **Tăng trưởng thực chất thấp hơn vẻ ngoài.** GMV tháng 01/2025 cao hơn 01/2024 ~35%, nhưng do Tết 2025 rơi vào 29/01 còn Tết 2024 rơi vào 10/02. Gộp tháng 01–02, GMV hai năm gần tương đương (~11,0 tỷ vs ~11,4 tỷ); booking cũng ngang nhau (28.928 vs 28.129).
-- 📱 **Hai app di động là kênh chủ lực (~60% GMV):** Android ~35%, iOS ~25%, Web ~24%, Đối tác ~15%.
-- 📅 **Nhu cầu có 3 cụm cao điểm lặp lại** (Tết, 30/4–1/5, hè & Quốc khánh 2/9); tháng cao nhất gấp ~2,6 lần tháng thấp nhất.
-- 🔁 **Tỷ lệ hủy ổn định** (~8,3–9,5%), không có xu hướng theo mùa → hủy mang tính **cấu trúc**, khác biệt đáng kể nằm ở chiều **tuyến** chứ không phải thời gian.
+- **Tăng trưởng thực chất thấp hơn vẻ ngoài.** GMV tháng 01/2025 cao hơn 01/2024 ~35%, nhưng do Tết 2025 rơi vào 29/01 còn Tết 2024 rơi vào 10/02. Gộp tháng 01–02, GMV hai năm gần tương đương (~11,0 tỷ vs ~11,4 tỷ); booking cũng ngang nhau (28.928 vs 28.129).
+- **Hai app di động là kênh chủ lực (~60% GMV):** Android ~35%, iOS ~25%, Web ~24%, Đối tác ~15%.
+- **Nhu cầu có 3 cụm cao điểm lặp lại** (Tết, 30/4–1/5, hè & Quốc khánh 2/9); tháng cao nhất gấp ~2,6 lần tháng thấp nhất.
+- **Tỷ lệ hủy ổn định** (~8,3–9,5%), không có xu hướng theo mùa → hủy mang tính **cấu trúc**, khác biệt đáng kể nằm ở chiều **tuyến** chứ không phải thời gian.
 
 <table>
 <tr>
-<td><img src="images/p1-gmv-by-month.png" alt="GMV theo tháng"/><br/><sub>GMV theo tháng và năm</sub></td>
-<td><img src="images/p1-gmv-by-channel.png" alt="GMV theo kênh"/><br/><sub>GMV theo kênh bán</sub></td>
+<td><img src="screenshots/GMV.png" alt="GMV theo năm"/><br/><sub>GMV theo năm</sub></td>
 </tr>
 </table>
 
@@ -107,7 +106,7 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 
 > **Câu hỏi:** nhu cầu biến động thế nào theo mùa, ngày lễ, thứ trong tuần và cần chuẩn bị nguồn cung vào thời điểm nào?
 
-![Seasonality & Demand](images/p2-seasonality-demand.png)
+![Seasonality & Demand](screenshots/seasonality_demand_dashboard.png)
 
 | Chỉ số | Kết quả |
 |---|---|
@@ -117,16 +116,15 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 
 **Insight chính**
 
-- ⚡ **Nhu cầu là các "xung nhọn" theo lịch:** mức nền ~250–300 booking/ngày; sáu cụm đột biến ~1K+/ngày (Tết, 30/4–1/5, 2/9 mỗi năm). Hình dạng hai năm gần trùng nhau → **dự báo theo lịch là khả thi**.
-- 🎆 Ngày Lễ/Tết chiếm ~7% số ngày nhưng tạo ra ~22% tổng booking (ước tính thô).
-- ☀️ **Hai loại "mùa cao điểm" cần hai chiến lược khác nhau:** Lễ/Tết ~1.080 booking/ngày (gấp ~4 lần), trong khi mùa hè chỉ ~330 (cao hơn ngày thường ~1,2 lần).
-- 📊 Các dịp lễ lớn năm 2025 cao hơn 2024 ~8% (Tết 2025 ~1.175/ngày; 2/9/2025 ~1.085/ngày) → **rủi ro thiếu cung ở cao điểm tăng dần**.
-- 📆 **Chu kỳ tuần rõ rệt:** Thứ Sáu – Thứ Hai cao (~360–410), Thứ Ba – Thứ Năm thấp; Thứ Ba chỉ bằng ~một nửa Thứ Sáu.
+- **Nhu cầu là các "xung nhọn" theo lịch:** mức nền ~250–300 booking/ngày; sáu cụm đột biến ~1K+/ngày (Tết, 30/4–1/5, 2/9 mỗi năm). Hình dạng hai năm gần trùng nhau → **dự báo theo lịch là khả thi**.
+- Ngày Lễ/Tết chiếm ~7% số ngày nhưng tạo ra ~22% tổng booking (ước tính thô).
+- **Hai loại "mùa cao điểm" cần hai chiến lược khác nhau:** Lễ/Tết ~1.080 booking/ngày (gấp ~4 lần), trong khi mùa hè chỉ ~330 (cao hơn ngày thường ~1,2 lần).
+- Các dịp lễ lớn năm 2025 cao hơn 2024 ~8% (Tết 2025 ~1.175/ngày; 2/9/2025 ~1.085/ngày) → **rủi ro thiếu cung ở cao điểm tăng dần**.
+- **Chu kỳ tuần rõ rệt:** Thứ Sáu – Thứ Hai cao (~360–410), Thứ Ba – Thứ Năm thấp; Thứ Ba chỉ bằng ~một nửa Thứ Sáu.
 
 <table>
 <tr>
-<td><img src="images/p2-bookings-by-season.png" alt="Booking theo mùa"/><br/><sub>Booking/ngày theo mùa</sub></td>
-<td><img src="images/p2-bookings-by-holiday.png" alt="Booking theo ngày lễ"/><br/><sub>Booking/ngày theo ngày lễ</sub></td>
+<td><img src="screenshots/booking_moi_ngay.png" alt="Booking theo ngày lễ"/><br/><sub>Booking/ngày theo ngày lễ</sub></td>
 </tr>
 </table>
 
@@ -138,7 +136,7 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 
 > **Câu hỏi:** tuyến nào tạo giá trị lớn nhất, tuyến nào khai thác kém hiệu quả, nên ưu tiên nguồn lực ở đâu?
 
-![Route Efficiency](images/p3-route-efficiency.png)
+![Route Efficiency](screenshots/route_efficiency_dashboard.png)
 
 | Chỉ số | Kết quả | Nhận định |
 |---|---|---|
@@ -149,16 +147,15 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 
 **Insight chính**
 
-- 🏆 **Cấu trúc Pareto:** TP.HCM → Đà Lạt (~11,2 tỷ), Hà Nội → Vinh (~9,7), Hà Nội → Đà Nẵng (~8,8), TP.HCM → Quy Nhơn (~8,5), Cần Thơ → TP.HCM (~8,2). Mạng lưới xoay quanh hai đầu mối **TP.HCM và Hà Nội**.
-- ↔️ **Bất đối xứng theo chiều:** Cần Thơ → TP.HCM ~34K booking, ngược lại chỉ ~6,1K (≈ 5,6 lần) → chiều ít khách dễ chạy rỗng.
-- 💰 **Lấp đầy cao ≠ sinh lời cao:** TP.HCM → Vũng Tàu lấp đầy ~0,70 nhưng hoa hồng/chuyến chỉ ~384K; Hà Nội → Đà Nẵng lấp đầy ~0,55 nhưng hoa hồng/chuyến cao nhất.
-- 📏 **Tuyến dài hủy nhiều hơn:** Quy Nhơn (650 km) ~12%, Nha Trang (430 km) ~10%, so với ~8% ở nhóm 300–350 km.
-- 🔎 **Buôn Ma Thuột:** ~9,8K booking nhưng lấp đầy chỉ 0,33 → nhu cầu có sẵn, nguồn cung dư → **điều chỉnh số chuyến thay vì kích cầu**.
+- **Cấu trúc Pareto:** TP.HCM → Đà Lạt (~11,2 tỷ), Hà Nội → Vinh (~9,7), Hà Nội → Đà Nẵng (~8,8), TP.HCM → Quy Nhơn (~8,5), Cần Thơ → TP.HCM (~8,2). Mạng lưới xoay quanh hai đầu mối **TP.HCM và Hà Nội**.
+- **Bất đối xứng theo chiều:** Cần Thơ → TP.HCM ~34K booking, ngược lại chỉ ~6,1K (≈ 5,6 lần) → chiều ít khách dễ chạy rỗng.
+- **Lấp đầy cao ≠ sinh lời cao:** TP.HCM → Vũng Tàu lấp đầy ~0,70 nhưng hoa hồng/chuyến chỉ ~384K; Hà Nội → Đà Nẵng lấp đầy ~0,55 nhưng hoa hồng/chuyến cao nhất.
+- **Tuyến dài hủy nhiều hơn:** Quy Nhơn (650 km) ~12%, Nha Trang (430 km) ~10%, so với ~8% ở nhóm 300–350 km.
+- **Buôn Ma Thuột:** ~9,8K booking nhưng lấp đầy chỉ 0,33 → nhu cầu có sẵn, nguồn cung dư → **điều chỉnh số chuyến thay vì kích cầu**.
 
 <table>
 <tr>
-<td><img src="images/p3-gmv-by-route.png" alt="GMV theo tuyến"/><br/><sub>GMV theo tuyến</sub></td>
-<td><img src="images/p3-occupancy-vs-commission.png" alt="Lấp đầy vs hoa hồng"/><br/><sub>Lấp đầy và hoa hồng/chuyến theo tuyến</sub></td>
+<td><img src="screenshots/GMV_theo_tuyen.png" alt="GMV theo tuyến"/><br/><sub>GMV theo tuyến</sub></td>
 </tr>
 </table>
 
@@ -166,10 +163,10 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 
 | Nhóm | Tuyến tiêu biểu (lấp đầy; hoa hồng/chuyến) | Hướng xử lý |
 |---|---|---|
-| ⭐ **Ngôi sao** | TP.HCM → Đà Lạt (0,70; ~666K); Hà Nội → Đà Nẵng | Bảo vệ nguồn cung, tối ưu giá cao điểm |
-| 📦 **Khối lượng cao, giá trị thấp** | TP.HCM → Vũng Tàu (0,70; ~384K; 27,7K booking) | Nâng giá trị mỗi booking (hạng ghế, combo khứ hồi) |
-| 🌱 **Tiềm năng chưa khai thác** | TP.HCM → Quy Nhơn (0,50; ~686K); Huế → Hà Nội (0,43; ~645K) | Thúc đẩy lấp đầy bằng ưu đãi nhẹ có điều kiện; xử lý hủy ở Quy Nhơn |
-| 🔍 **Cần rà soát** | TP.HCM → Phan Thiết (0,39); Cà Mau (0,39); Buôn Ma Thuột (0,33); Hà Nội → Nam Định (0,22) | Giảm tần suất, ghép chuyến hoặc đàm phán lại với nhà xe |
+| **Ngôi sao** | TP.HCM → Đà Lạt (0,70; ~666K); Hà Nội → Đà Nẵng | Bảo vệ nguồn cung, tối ưu giá cao điểm |
+| **Khối lượng cao, giá trị thấp** | TP.HCM → Vũng Tàu (0,70; ~384K; 27,7K booking) | Nâng giá trị mỗi booking (hạng ghế, combo khứ hồi) |
+| **Tiềm năng chưa khai thác** | TP.HCM → Quy Nhơn (0,50; ~686K); Huế → Hà Nội (0,43; ~645K) | Thúc đẩy lấp đầy bằng ưu đãi nhẹ có điều kiện; xử lý hủy ở Quy Nhơn |
+| **Cần rà soát** | TP.HCM → Phan Thiết (0,39); Cà Mau (0,39); Buôn Ma Thuột (0,33); Hà Nội → Nam Định (0,22) | Giảm tần suất, ghép chuyến hoặc đàm phán lại với nhà xe |
 
 **Kết luận trang:** *quy mô không đồng nghĩa với hiệu quả.* Bảo vệ nhóm Top 5; dư địa cải thiện nằm ở nhóm "tiềm năng chưa khai thác" và "cần rà soát".
 
@@ -179,7 +176,7 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 
 > **Câu hỏi:** mỗi đồng giảm giá tạo ra bao nhiêu đồng hoa hồng, voucher nào hiệu quả, và voucher có thu hút khách mới hay làm tăng giá trị đơn không?
 
-![Promo Performance](images/p4-promo-performance.png)
+![Promo Performance](screenshots/promo_performance_dashboard.png)
 
 | Chỉ số | Kết quả | Nhận định |
 |---|---|---|
@@ -188,7 +185,7 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 | **Hoa hồng voucher** | 2,06 tỷ | Thấp hơn chi phí giảm giá |
 | **AOV có voucher vs không** | 401K vs 383K | Chênh lệch chủ yếu do hiệu ứng cơ cấu (TET15 ~462K); tỷ lệ hủy gần như không đổi (8,9% vs 9,0%) |
 
-> ⚠️ **Hoa hồng / chi phí = 0,86** — mỗi 1 đồng giảm giá chỉ thu lại ~0,86 đồng hoa hồng, **thâm hụt ~325 triệu đồng**. Đây là hoa hồng của *toàn bộ* booking dùng voucher, không phải phần tăng thêm nhờ voucher → hiệu quả thực có thể còn thấp hơn.
+> **Hoa hồng / chi phí = 0,86** — mỗi 1 đồng giảm giá chỉ thu lại ~0,86 đồng hoa hồng, **thâm hụt ~325 triệu đồng**. Đây là hoa hồng của *toàn bộ* booking dùng voucher, không phải phần tăng thêm nhờ voucher → hiệu quả thực có thể còn thấp hơn.
 
 **Kết quả theo voucher (triệu đồng)**
 
@@ -205,26 +202,20 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 
 <sub>* FLASH30K được suy ra từ dòng Total trừ sáu mã còn lại (không hiển thị đầy đủ trên dashboard); cần lấy số chính xác từ Power BI.</sub>
 
-<table>
-<tr>
-<td><img src="images/p4-roi-by-voucher.png" alt="HH trên chi phí theo voucher"/><br/><sub>Hoa hồng / chi phí theo voucher</sub></td>
-<td><img src="images/p4-cost-by-month.png" alt="Chi phí theo tháng"/><br/><sub>Chi phí và hoa hồng voucher theo tháng</sub></td>
-</tr>
-</table>
 
 **Insight chính**
 
-- 🎟️ **Hiệu quả do thiết kế mức giảm quyết định, không phải năm hay thời điểm.** Hoa hồng mỗi lượt chỉ ~31–36K (~8–9% giá vé); VEX5 giảm ~5% → có lãi, HE10 ~10% và TET15 ~15% → lỗ. **Mức giảm vượt ~8–9% giá vé gần như chắc chắn đưa chỉ số xuống dưới 1.**
-- 💸 **TET15 và WELCOME50K** chiếm ~53,6% chi phí nhưng chỉ tạo ~35,0% hoa hồng (chênh lệch ~−556 triệu). VEX5 bù được khoảng một nửa thâm hụt của năm mã còn lại.
+- **Hiệu quả do thiết kế mức giảm quyết định, không phải năm hay thời điểm.** Hoa hồng mỗi lượt chỉ ~31–36K (~8–9% giá vé); VEX5 giảm ~5% → có lãi, HE10 ~10% và TET15 ~15% → lỗ. **Mức giảm vượt ~8–9% giá vé gần như chắc chắn đưa chỉ số xuống dưới 1.**
+- **TET15 và WELCOME50K** chiếm ~53,6% chi phí nhưng chỉ tạo ~35,0% hoa hồng (chênh lệch ~−556 triệu). VEX5 bù được khoảng một nửa thâm hụt của năm mã còn lại.
 - 🧑‍🤝‍🧑 **Chưa chứng minh được vai trò thu hút khách mới:** tỷ lệ đơn đầu của WELCOME50K (~0,54) và VEX5 (~0,55) xấp xỉ mốc nền (~54,9%). Với WELCOME50K, ~46% lượt dùng đến từ khách đã có booking trước đó (~232 triệu đồng chi phí).
-- 🕐 **Chi sai thời điểm:** chi phí dồn vào tháng 01 (~490 triệu năm 2025, ~20,6% chi phí hai năm) — đúng lúc nhu cầu đã gấp ~4 lần ngày thường. Hoa hồng/chi phí giảm từ ~0,79 (01/2024) xuống ~0,65 (01/2025) trong khi chi phí tăng ~69% còn nhu cầu cao điểm chỉ tăng ~8%. Ngược lại, các tháng thấp điểm (03, 05, 10–12) gần như không có ưu đãi, đúng lúc ghế trống nhiều nhất.
-- 🚨 **Chưa có cơ chế khóa trần chi phí:** tổng chi phí 2.382,86 triệu vượt ngân sách 2.000 triệu (~19%).
+- **Chi sai thời điểm:** chi phí dồn vào tháng 01 (~490 triệu năm 2025, ~20,6% chi phí hai năm) — đúng lúc nhu cầu đã gấp ~4 lần ngày thường. Hoa hồng/chi phí giảm từ ~0,79 (01/2024) xuống ~0,65 (01/2025) trong khi chi phí tăng ~69% còn nhu cầu cao điểm chỉ tăng ~8%. Ngược lại, các tháng thấp điểm (03, 05, 10–12) gần như không có ưu đãi, đúng lúc ghế trống nhiều nhất.
+- **Chưa có cơ chế khóa trần chi phí:** tổng chi phí 2.382,86 triệu vượt ngân sách 2.000 triệu (~19%).
 
 **Kết luận trang:** khuyến mãi đang được chi **sai thời điểm và sai mức**; dashboard chưa đo được hiệu quả *tăng thêm* (incremental) → cần nhóm đối chứng hoặc thử nghiệm A/B.
 
 ---
 
-## 4. 🔗 Insight tổng hợp
+## 4. Insight tổng hợp
 
 Giá trị lớn nhất của dashboard nằm ở việc **đọc chéo giữa các trang**:
 
@@ -241,18 +232,18 @@ Giá trị lớn nhất của dashboard nằm ở việc **đọc chéo giữa c
 
 ---
 
-## 5. ✅ Khuyến nghị cho doanh nghiệp
+## 5. Khuyến nghị cho doanh nghiệp
 
 ### 5.1. Bảng khuyến nghị ưu tiên
 
 | Ưu tiên | Khuyến nghị | KPI theo dõi | Tác động ước tính |
 |---|---|---|---|
-| 🔴 **1 – Cao** | **Tái cấu trúc voucher:** mức giảm ≤ ~8–9% giá vé; dừng hoặc thay TET15; WELCOME50K chỉ cho đơn đầu của tài khoản mới, có ngưỡng đơn tối thiểu; mở rộng thử nghiệm VEX5; đặt trần chi phí cho từng mã | HH/chi phí ≥ 1,0 (từ 0,86); chi phí ≤ ngân sách; tỷ lệ đơn đầu của WELCOME50K ≥ 80% | Dừng TET15 tiết kiệm ~773 triệu chi phí, mất tối đa ~404 triệu hoa hồng → cải thiện hoa hồng ròng ≥ ~369 triệu ở mọi mức "tăng thêm" từ 0–100% (chưa tính giá trị vòng đời) |
-| 🔴 **1 – Cao** | **Chuyển khuyến mãi sang điểm trũng:** Buôn Ma Thuột, Phan Thiết, Cà Mau, Hà Nội → Nam Định; Thứ Ba – Thứ Năm; tháng 03, 05, 10–12; voucher lấp ghế có điều kiện chuyến hoặc khung giờ | Lấp đầy tuyến mục tiêu và giữa tuần; HH/chi phí của voucher lấp ghế | +1 điểm % lấp đầy ≈ +1,8% ghế bán ≈ ~1,6 tỷ GMV và ~143 triệu hoa hồng trong 2 năm (ước tính tuyến tính) |
-| 🟠 **2 – Cao** | **Lịch cao điểm và giá động:** hệ số nhu cầu theo từng dịp, giá cao ở đỉnh, ưu đãi đặt sớm ngoài đỉnh; thương lượng thêm chuyến trước Tết 4–6 tuần | Doanh thu/ghế cao điểm; tỷ lệ chuyến kín; thời gian đặt trước | Giữ giá trị khi nhu cầu gấp ~4 lần mức nền |
-| 🟡 **2 – Trung bình** | **Giảm hủy theo tuyến:** phí hủy theo bậc thời gian, nhắc lịch trước ngày đi, cho đổi chuyến thay vì hủy; ưu tiên Quy Nhơn và Nha Trang | Tỷ lệ hủy từ 8,97% xuống ≤ ~8%; hủy theo tuyến | −1 điểm % hủy ≈ ~2,45 nghìn booking, ~0,95 tỷ GMV và ~85 triệu hoa hồng trong 2 năm (nếu giữ lại hoặc bán lại được) |
-| 🟡 **3 – Trung bình** | **Quản lý danh mục tuyến theo 4 nhóm** (Ngôi sao / Khối lượng cao–giá trị thấp / Tiềm năng / Cần rà soát); combo khứ hồi cho Vũng Tàu và Cần Thơ → TP.HCM; rà soát tuyến lấp đầy dưới ~40% | Hoa hồng/chuyến và lấp đầy theo nhóm tuyến | Tái phân bổ chuyến sang tuyến tiềm năng |
-| 🟡 **3 – Trung bình** | **Tối ưu kênh bán:** đầu tư trải nghiệm app Android/iOS (~60% GMV), duy trì Web, đánh giá chi phí phân phối của kênh Đối tác | AOV, tỷ lệ hủy, hoa hồng theo kênh | Giảm phụ thuộc vào một kênh (Android ~35%) |
+| **1 – Cao** | **Tái cấu trúc voucher:** mức giảm ≤ ~8–9% giá vé; dừng hoặc thay TET15; WELCOME50K chỉ cho đơn đầu của tài khoản mới, có ngưỡng đơn tối thiểu; mở rộng thử nghiệm VEX5; đặt trần chi phí cho từng mã | HH/chi phí ≥ 1,0 (từ 0,86); chi phí ≤ ngân sách; tỷ lệ đơn đầu của WELCOME50K ≥ 80% | Dừng TET15 tiết kiệm ~773 triệu chi phí, mất tối đa ~404 triệu hoa hồng → cải thiện hoa hồng ròng ≥ ~369 triệu ở mọi mức "tăng thêm" từ 0–100% (chưa tính giá trị vòng đời) |
+| **1 – Cao** | **Chuyển khuyến mãi sang điểm trũng:** Buôn Ma Thuột, Phan Thiết, Cà Mau, Hà Nội → Nam Định; Thứ Ba – Thứ Năm; tháng 03, 05, 10–12; voucher lấp ghế có điều kiện chuyến hoặc khung giờ | Lấp đầy tuyến mục tiêu và giữa tuần; HH/chi phí của voucher lấp ghế | +1 điểm % lấp đầy ≈ +1,8% ghế bán ≈ ~1,6 tỷ GMV và ~143 triệu hoa hồng trong 2 năm (ước tính tuyến tính) |
+| **2 – Cao** | **Lịch cao điểm và giá động:** hệ số nhu cầu theo từng dịp, giá cao ở đỉnh, ưu đãi đặt sớm ngoài đỉnh; thương lượng thêm chuyến trước Tết 4–6 tuần | Doanh thu/ghế cao điểm; tỷ lệ chuyến kín; thời gian đặt trước | Giữ giá trị khi nhu cầu gấp ~4 lần mức nền |
+| **2 – Trung bình** | **Giảm hủy theo tuyến:** phí hủy theo bậc thời gian, nhắc lịch trước ngày đi, cho đổi chuyến thay vì hủy; ưu tiên Quy Nhơn và Nha Trang | Tỷ lệ hủy từ 8,97% xuống ≤ ~8%; hủy theo tuyến | −1 điểm % hủy ≈ ~2,45 nghìn booking, ~0,95 tỷ GMV và ~85 triệu hoa hồng trong 2 năm (nếu giữ lại hoặc bán lại được) |
+| **3 – Trung bình** | **Quản lý danh mục tuyến theo 4 nhóm** (Ngôi sao / Khối lượng cao–giá trị thấp / Tiềm năng / Cần rà soát); combo khứ hồi cho Vũng Tàu và Cần Thơ → TP.HCM; rà soát tuyến lấp đầy dưới ~40% | Hoa hồng/chuyến và lấp đầy theo nhóm tuyến | Tái phân bổ chuyến sang tuyến tiềm năng |
+| **3 – Trung bình** | **Tối ưu kênh bán:** đầu tư trải nghiệm app Android/iOS (~60% GMV), duy trì Web, đánh giá chi phí phân phối của kênh Đối tác | AOV, tỷ lệ hủy, hoa hồng theo kênh | Giảm phụ thuộc vào một kênh (Android ~35%) |
 
 ### 5.2. Lộ trình triển khai đề xuất
 
@@ -264,7 +255,7 @@ Giá trị lớn nhất của dashboard nằm ở việc **đọc chéo giữa c
 
 ---
 
-## 6. ⚠️ Lưu ý và giới hạn
+## 6. Lưu ý và giới hạn
 
 - Toàn bộ số liệu dựa trên **dữ liệu mô phỏng** — giá trị của dự án nằm ở cách đặt câu hỏi, kiểm tra chéo số liệu, diễn giải và chuyển hóa insight thành hành động, **không** nhằm kết luận về thị trường thực tế.
 - Dataset chưa có chi phí theo kênh, nhật ký chuyển trạng thái, giao dịch thanh toán/hoàn tiền thực tế hay hợp đồng hoa hồng.
@@ -275,7 +266,7 @@ Giá trị lớn nhất của dashboard nằm ở việc **đọc chéo giữa c
 
 ---
 
-## 7. 🛠️ Công cụ sử dụng
+## 7. Công cụ sử dụng
 
 - **Power BI** — mô hình dữ liệu, DAX measures, thiết kế dashboard
 - **Mô hình Fact–Dimension (Kimball)** — star/galaxy schema
@@ -283,7 +274,7 @@ Giá trị lớn nhất của dashboard nằm ở việc **đọc chéo giữa c
 
 ---
 
-## 📚 Tài liệu tham khảo
+## Tài liệu tham khảo
 
 - Kimball, R., & Ross, M. (2013). *The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling* (3rd ed.). Wiley.
 - Microsoft Learn. *Understand star schema and the importance for Power BI.*
