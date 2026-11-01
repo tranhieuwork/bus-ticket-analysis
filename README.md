@@ -16,6 +16,9 @@ This project simulates a bus ticket marketplace to analyze booking transactions,
 - Examine cancellations, refunds, voucher usage, and seat occupancy.
 - Build an interactive Power BI dashboard to support data-driven decisions.
 
+<img width="461" height="258" alt="image" src="https://github.com/user-attachments/assets/b5cf31ac-15ba-48b6-92c6-7be1bb8d00bd" />
+
+
 ## Tools & Technologies
 
 - Python
