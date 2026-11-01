@@ -92,12 +92,6 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 - **Nhu cầu có 3 cụm cao điểm lặp lại** (Tết, 30/4–1/5, hè & Quốc khánh 2/9); tháng cao nhất gấp ~2,6 lần tháng thấp nhất.
 - **Tỷ lệ hủy ổn định** (~8,3–9,5%), không có xu hướng theo mùa → hủy mang tính **cấu trúc**, khác biệt đáng kể nằm ở chiều **tuyến** chứ không phải thời gian.
 
-<table>
-<tr>
-<td><img src="screenshots/GMV.png" alt="GMV theo năm"/><br/><sub>GMV theo năm</sub></td>
-</tr>
-</table>
-
 **Kết luận trang:** quy mô giao dịch và nguồn thu hoa hồng ổn định, nhưng còn **hai điểm rò rỉ giá trị: ghế trống và booking hủy**.
 
 ---
