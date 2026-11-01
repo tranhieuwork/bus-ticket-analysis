@@ -205,7 +205,6 @@ Giai đoạn **01/01/2024 – 31/12/2025**, tổ chức theo mô hình **Fact–
 - **Chi sai thời điểm:** chi phí dồn vào tháng 01 (~490 triệu năm 2025, ~20,6% chi phí hai năm) — đúng lúc nhu cầu đã gấp ~4 lần ngày thường. Hoa hồng/chi phí giảm từ ~0,79 (01/2024) xuống ~0,65 (01/2025) trong khi chi phí tăng ~69% còn nhu cầu cao điểm chỉ tăng ~8%. Ngược lại, các tháng thấp điểm (03, 05, 10–12) gần như không có ưu đãi, đúng lúc ghế trống nhiều nhất.
 - **Chưa có cơ chế khóa trần chi phí:** tổng chi phí 2.382,86 triệu vượt ngân sách 2.000 triệu (~19%).
 
-**Kết luận trang:** khuyến mãi đang được chi **sai thời điểm và sai mức**; dashboard chưa đo được hiệu quả *tăng thêm* (incremental) → cần nhóm đối chứng hoặc thử nghiệm A/B.
 
 ---
 
