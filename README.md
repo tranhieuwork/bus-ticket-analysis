@@ -2,7 +2,7 @@
 
 > Dự án Business Intelligence trên **Power BI**: xây dựng mô hình dữ liệu Fact–Dimension cho một nền tảng đặt vé xe khách (marketplace) giả lập, thiết kế dashboard 4 trang và chuyển hóa dữ liệu thành **insight** và **khuyến nghị hành động** cho doanh nghiệp.
 
-![Executive Overview](images/p1-executive-overview.png)
+![Executive Overview](screenshots/executive_overview_dashboard.png)
 
 ---
 
